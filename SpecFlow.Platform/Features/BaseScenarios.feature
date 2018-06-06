@@ -1,30 +1,30 @@
 ﻿Feature: BaseScenarios
 	 These Scenarios can be used in any project
 
-@Debug
-Scenario: Validate the title of website
-	Given I navigate to the homepage
+Background: 
+Given I navigate to the homepage
+
+
+@Chrome
+Scenario: 01. Validate the title of website
 	Then  I see the page title contains "Wikipedia"
 
-@Debug
-Scenario: Validate the Url of the website
-	Given I navigate to the homepage
+@Chrome
+Scenario: 02. Validate the Url of the website
 	Then  I see the page Url contains "www.wikipedia.org"
 
 
-@Debug
-Scenario: Validate the PageSource string on the website
-	Given I navigate to the homepage
+@Chrome
+Scenario: 03. Validate the PageSource string on the website
 	Then  I see "The Free Encyclopedia" in the PageSource
 
 
-@Debug
-Scenario: Validate existence of multiple texts in PageSource
-	Given I navigate to the homepage
+@Chrome
+Scenario: 04. Validate existence of multiple texts in PageSource
 	Then  I see 
-	| expectedText         |
-	| The Free Encylopedia |
-	| Deutsch|
-	| Русский|
-	| 日本語 |
+	| expectedText          |
+	| The Free Encyclopedia |
+	| Deutsch               |
+	| Русский               |
+	| 日本語                   |
 

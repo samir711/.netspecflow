@@ -11,7 +11,11 @@ namespace SpecFlow.Platform.Steps
     public sealed class DynamicTableSteps :BaseSteps
     {
 
-
+        [Then(@"I see")]
+        public void ThenISee(Table table)
+        {
+            InstanceOf<SpecFlow.Platform.Pages.BasePage>().ValidateMultipleTextInPageSource(table);
+        }
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿Feature: EnterPointsScenario
 	 These are the enter point scenrios to the website
 
-@Debug
+@Chrome
 Scenario: Access Main Enter Point
 	Given I navigate to the homepage

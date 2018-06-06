@@ -17,14 +17,14 @@ namespace SpecFlow.Platform.Pages
         public IWebDriver Driver { get; internal set; }
         public string GetTitle() { return Driver.Title; }
         public string GetUrl() { return Driver.Title; }
-        public string GetText() { return Driver.PageSource; }
+        public string GetPageSource() { return Driver.PageSource; }
 
         internal void ValidateMultipleTextInPageSource(Table table)
         {
             foreach (var row in table.Rows)
             {
                 var textToValidate = row["expectedText"];
-                Assert.IsTrue(Driver.PageSource.Contains(textToValidate), "This is not the expected text!");
+                Assert.IsTrue(GetPageSource().Contains(textToValidate), textToValidate + " is not in the PageSource! ");
                 Console.WriteLine(":: The text {0} is in the PageSource " , textToValidate);
 
             }
@@ -32,7 +32,7 @@ namespace SpecFlow.Platform.Pages
 
         internal void ValidateTextInPageSource(string expectedText)
         {
-            var textToValidate = Driver.PageSource.Contains(expectedText);
+            var textToValidate = GetPageSource().Contains(expectedText);
             Assert.IsTrue(textToValidate, ":: This is not the expected title");
             Console.WriteLine(":: The text {0} in the PageSource is  " , expectedText);
         }
@@ -48,7 +48,7 @@ namespace SpecFlow.Platform.Pages
        
         public void ValidatePageTitle(string expectedTitle)
         {
-            var titleToValidate = Driver.Title.Contains(expectedTitle);
+            var titleToValidate = GetTitle().Contains(expectedTitle);
             Assert.IsTrue(titleToValidate, ":: This is not the expected title");
             Console.WriteLine(":: the title of the site is " + GetTitle());
         }

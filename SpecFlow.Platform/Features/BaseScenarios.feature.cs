@@ -63,73 +63,81 @@ namespace SpecFlow.Platform.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate the title of website")]
-        [NUnit.Framework.CategoryAttribute("Debug")]
-        public virtual void ValidateTheTitleOfWebsite()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the title of website", new string[] {
-                        "Debug"});
+#line 4
 #line 5
+testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("01. Validate the title of website")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
+        public virtual void _01_ValidateTheTitleOfWebsite()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01. Validate the title of website", new string[] {
+                        "Chrome"});
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 6
- testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 7
+#line 4
+this.FeatureBackground();
+#line 10
  testRunner.Then("I see the page title contains \"Wikipedia\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate the Url of the website")]
-        [NUnit.Framework.CategoryAttribute("Debug")]
-        public virtual void ValidateTheUrlOfTheWebsite()
+        [NUnit.Framework.DescriptionAttribute("02. Validate the Url of the website")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
+        public virtual void _02_ValidateTheUrlOfTheWebsite()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the Url of the website", new string[] {
-                        "Debug"});
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02. Validate the Url of the website", new string[] {
+                        "Chrome"});
+#line 13
 this.ScenarioSetup(scenarioInfo);
-#line 11
- testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
+#line 4
+this.FeatureBackground();
+#line 14
  testRunner.Then("I see the page Url contains \"www.wikipedia.org\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate the PageSource string on the website")]
-        [NUnit.Framework.CategoryAttribute("Debug")]
-        public virtual void ValidateThePageSourceStringOnTheWebsite()
+        [NUnit.Framework.DescriptionAttribute("03. Validate the PageSource string on the website")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
+        public virtual void _03_ValidateThePageSourceStringOnTheWebsite()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the PageSource string on the website", new string[] {
-                        "Debug"});
-#line 16
-this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03. Validate the PageSource string on the website", new string[] {
+                        "Chrome"});
 #line 18
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 19
  testRunner.Then("I see \"The Free Encyclopedia\" in the PageSource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate existence of multiple texts in PageSource")]
-        [NUnit.Framework.CategoryAttribute("Debug")]
-        public virtual void ValidateExistenceOfMultipleTextsInPageSource()
+        [NUnit.Framework.DescriptionAttribute("04. Validate existence of multiple texts in PageSource")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
+        public virtual void _04_ValidateExistenceOfMultipleTextsInPageSource()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate existence of multiple texts in PageSource", new string[] {
-                        "Debug"});
-#line 22
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04. Validate existence of multiple texts in PageSource", new string[] {
+                        "Chrome"});
 #line 23
- testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "expectedText"});
             table1.AddRow(new string[] {
-                        "The Free Encylopedia"});
+                        "The Free Encyclopedia"});
             table1.AddRow(new string[] {
                         "Deutsch"});
             table1.AddRow(new string[] {
