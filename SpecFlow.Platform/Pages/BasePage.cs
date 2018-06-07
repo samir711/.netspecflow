@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using SpecFlow.Platform.Utils.Extensions;
+
 
 namespace SpecFlow.Platform.Pages
 {
@@ -18,6 +20,37 @@ namespace SpecFlow.Platform.Pages
         public string GetTitle() { return Driver.Title; }
         public string GetUrl() { return Driver.Title; }
         public string GetPageSource() { return Driver.PageSource; }
+
+        internal void LanguageListIsVisible()
+        {
+            var ValLanguageList = Driver.FindElement(By.ClassName("lang-list-active"));
+            ValLanguageList.WebElementIsDisplayed(15);
+            Console.WriteLine(":: The element ValLanguagaeList is displayed");
+
+            //if (ValLanguageList.Displayed == true)
+            //{
+            //    Console.WriteLine(":: The class is displayed");
+            //}
+            //else
+            //{
+            //    Console.WriteLine(":: The class is not displayed");
+            //}
+        }
+
+        public void OpenLanguageList()
+        {
+            var LinkLangList = Driver.FindElement(By.Id("js-lang-list-button"));
+            LinkLangList.Click();
+        }
+
+        // lang-list-button-text js110n
+        public EnglishHomePage NavEnglishHomePage()
+        {
+            var LinkEnglish = Driver.FindElement(By.Id("js-link-box-en"));
+            LinkEnglish.Click();
+            return InstanceOf<EnglishHomePage>();
+
+        }
 
         internal void ValidateMultipleTextInPageSource(Table table)
         {
@@ -64,7 +97,6 @@ namespace SpecFlow.Platform.Pages
 
 
 
-
-     
+        
     }
 }

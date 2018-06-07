@@ -13,9 +13,7 @@ namespace SpecFlow.Platform.Pages
     
        protected T InstanceOf<T>() where T : BasePage, new()
        {
-          var pageClass = new T {
-              Driver = Driver.Browser() 
-          };
+          var pageClass = new T {  Driver = Driver.Browser() };
          return pageClass;
        }
 

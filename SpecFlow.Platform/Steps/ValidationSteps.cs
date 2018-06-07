@@ -12,6 +12,13 @@ namespace SpecFlow.Platform.Steps
     public sealed class ValidationSteps : BaseSteps
     {
 
+        [Then(@"I see the language list")]
+        public void ThenISeeTheLanguageList()
+        {
+            InstanceOf<BasePage>().LanguageListIsVisible();
+        }
+
+
         [Then(@"I see ""(.*)"" in the PageSource")]
         public void ThenISeeInThePageSource(string expectedText)
         {

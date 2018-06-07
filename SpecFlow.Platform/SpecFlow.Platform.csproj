@@ -94,6 +94,7 @@
       <DependentUpon>WikipediaScenarios.feature</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\EnglishHomePage.cs" />
     <Compile Include="Pages\Page.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Utils\Drivers\WebElementExtension.cs" />
     <Compile Include="Utils\Extensions\GeneralExtensions.cs" />
     <Compile Include="Utils\Extensions\JavaScriptExtension.cs" />
+    <Compile Include="Utils\Extensions\WebElementExtensions.cs" />
     <Compile Include="Utils\Helpers\GeneralHelpers.cs" />
     <Compile Include="Utils\Helpers\JavaScriptMethod.cs" />
     <Compile Include="Utils\Hooks\FeatureHooks.cs" />

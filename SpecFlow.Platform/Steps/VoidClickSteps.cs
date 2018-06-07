@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpecFlow.Platform.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,12 @@ namespace SpecFlow.Platform.Steps
     [Binding]
     public sealed class VoidClickSteps : BaseSteps
     {
+        [When(@"I Open the language list")]
+        public void WhenIOpenTheLanguageList()
+        {
+            InstanceOf<BasePage>().OpenLanguageList();
+        }
+
 
 
     }

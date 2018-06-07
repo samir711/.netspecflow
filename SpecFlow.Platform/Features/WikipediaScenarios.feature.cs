@@ -85,7 +85,26 @@ this.FeatureBackground();
 #line 9
  testRunner.When("I click the English link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then("I see the page tile contains \"Wikipedia, the free encylopedia\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the page title contains \"Wikipedia, the free encyclopedia\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("02. Void click")]
+        [NUnit.Framework.CategoryAttribute("Debug")]
+        public virtual void _02_VoidClick()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02. Void click", new string[] {
+                        "Debug"});
+#line 13
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 14
+  testRunner.When("I Open the language list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+   testRunner.Then("I see the language list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
