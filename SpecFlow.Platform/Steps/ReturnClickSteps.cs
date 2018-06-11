@@ -17,5 +17,24 @@ namespace SpecFlow.Platform.Steps
             InstanceOf<BasePage>().NavEnglishHomePage();
         }
 
+        [When(@"I go to All Portal")]
+        public void WhenIGoToAllPortal()
+        {
+            InstanceOf<EnglishHomePage>().NavToAllPortal();
+        }
+
+        [When(@"I navigate to Community page")]
+        public void WhenINavigateToCommunityPage()
+        {
+            
+        }
+
+        [When(@"I go to Dashboard")]
+        public void WhenIGoToDashboard()
+        {
+           
+        }
+
+
     }
 }

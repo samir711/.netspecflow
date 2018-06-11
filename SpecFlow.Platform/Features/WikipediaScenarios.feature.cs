@@ -108,6 +108,31 @@ this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("03. POM Navigation")]
+        [NUnit.Framework.CategoryAttribute("Debug")]
+        public virtual void _03_POMNavigation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03. POM Navigation", new string[] {
+                        "Debug"});
+#line 22
+ this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 23
+  testRunner.When("I click the English link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+  testRunner.And("I go to All Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+  testRunner.And("I navigate to Community page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+  testRunner.When("I go to Dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+  testRunner.Then("I see \"Welcome to the Wikipedia Dashboard\" in the PageSource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

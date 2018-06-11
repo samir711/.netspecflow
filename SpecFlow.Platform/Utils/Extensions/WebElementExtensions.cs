@@ -11,6 +11,20 @@ namespace SpecFlow.Platform.Utils.Extensions
 {
     public static class WebElementExtensions
     {
+        public static void WeElementToBeClickable(this IWebElement element, int sec = 10)
+        {
+            var wait = new WebDriverWait(Driver.Browser(), TimeSpan.FromSeconds(sec));
+            wait.Until(ExpectedConditions.ElementToBeClickable(element));
+
+        }
+
+        public static void WeClick(this IWebElement element, int sec = 10)
+        {
+            element.WeElementToBeClickable(sec);
+            element.WeHighlightElement();
+            element.Click();
+
+        }
 
         public static void WeHighlightElement(this IWebElement element)
         {

@@ -40,14 +40,15 @@ namespace SpecFlow.Platform.Pages
         public void OpenLanguageList()
         {
             var LinkLangList = Driver.FindElement(By.Id("js-lang-list-button"));
-            LinkLangList.Click();
+            LinkLangList.WeClick(15);
         }
 
         // lang-list-button-text js110n
         public EnglishHomePage NavEnglishHomePage()
         {
             var LinkEnglish = Driver.FindElement(By.Id("js-link-box-en"));
-            LinkEnglish.Click();
+            LinkEnglish.WeClick(5);
+            Console.WriteLine(":: I have clicked the LinkEngish link");
             return InstanceOf<EnglishHomePage>();
 
         }

@@ -18,4 +18,10 @@ Scenario: 02. Void click
    #| Azərbaycanca |
    #| Esperanto    |
 
- 
+ @Debug
+ Scenario: 03. POM Navigation
+  When I click the English link
+  And I go to All Portal
+  And I navigate to Community page
+  When I go to Dashboard
+  Then I see "Welcome to the Wikipedia Dashboard" in the PageSource
